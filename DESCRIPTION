@@ -1,0 +1,16 @@
+Package: mexicolors
+Type: Package
+Title: Mexican Politics-Inspired Color Palette Generator
+Version: 0.1.0
+Authors@R: person("Alejandro", "Platas-López", role = c("aut", "cre"),
+    email = "alejandroplatasl@gmail.com", comment = c(ORCID = "0000-0002-2584-343X"))
+Maintainer: Alejandro Platas-López <alejandroplatasl@gmail.com>
+BugReports: https://github.com/alexplatasl/mexicolors/issues
+Description: A crisp, clean color palette generator inspired by Mexican politics, with colors ranging from 
+    blue on the left to gray in the middle and red on the right. A variety of palettes allow for a range of
+    applications from brief discrete scales (e.g., three colors for Morena, PRI, PRD, and PAN) 
+    to continuous interpolated arrays including dozens of shades graded from blue (left) to red (right).
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
