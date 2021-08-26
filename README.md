@@ -28,66 +28,95 @@ Users simply supply the name of the desired palette in the main function `mexico
 ### Displaying each palette
 
 ```{r }
+mexico_palette("cuatroT")
+```
+![](examples/dis_4T.png)
+
+```{r }
+mexico_palette("ine")
+```
+![](examples/dis_ine.png)
+
+```{r }
 mexico_palette("morena")
 ```
-![](dis_morena.png)
+![](examples/dis_morena.png)
 
 
 ```{r }
 mexico_palette("pri")
 ```
-![](dis_pri.png)
+![](examples/dis_pri.png)
 
 
 ```{r }
 mexico_palette("pan")
 ```
-![](dis_pan.png)
+![](examples/dis_pan.png)
 
 
 ```{r }
 mexico_palette("prd")
 ```
-![](dis_prd.png)
+![](examples/dis_prd.png)
 
 
 ```{r }
-mexico_palette("cuatroT")
+mexico_palette("pvem")
 ```
-![](dis_4T.png)
+![](examples/dis_pvem.png)
+
+```{r }
+mexico_palette("mc")
+```
+![](examples/dis_mc.png)
 
 
 ### Interpolating between existing colors based on the palettes using the "continuous" `type`
 
 ```{r }
+mexico_palette(n = 50, name = "cuatroT", type = "continuous")
+```
+![](examples/con_4T.png)
+
+```{r }
+mexico_palette(n = 50, name = "ine", type = "continuous")
+```
+![](examples/con_ine.png)
+
+```{r }
 mexico_palette(n = 50, name = "morena", type = "continuous")
 ```
-![](con_morena.png)
+![](examples/con_morena.png)
 
 
 ```{r }
 mexico_palette(n = 50, name = "pri", type = "continuous")
 ```
-![](con_pri.png)
+![](examples/con_pri.png)
 
 
 ```{r }
 mexico_palette(n = 50, name = "pan", type = "continuous")
 ```
-![](con_pan.png)
+![](examples/con_pan.png)
 
 
 ```{r }
 mexico_palette(n = 50, name = "prd", type = "continuous")
 ```
-![](con_prd.png)
+![](examples/con_prd.png)
 
 
 ```{r }
-mexico_palette(n = 50, name = "cuatroT", type = "continuous")
+mexico_palette(n = 50, name = "pvem", type = "continuous")
 ```
-![](con_4T.png)
+![](examples/con_pvem.png)
 
+```{r }
+mexico_palette(n = 50, name = "mc", type = "continuous")
+```
+![](examples/con_mc.png)
 
 ### Example Political Cases (Discrete and Continuous)
 
@@ -106,7 +135,7 @@ ggplot(data1, aes(id)) +
        y = "Count of Respondents") +
   theme_bw()
 ```
-![](lev100.png)
+![](examples/lev100.png)
 
 
 ### Non-Political Cases (5 and 7 level palettes)
@@ -120,7 +149,7 @@ ggplot(diamonds, aes(factor(cut), fill = factor(cut))) +
   scale_fill_manual(values = mexico_palette("cuatroT", 5, "discrete")) +
   theme_bw()
 ```
-![](lev5.png)
+![](examples/lev5.png)
 
 
 ```{r }
@@ -132,7 +161,7 @@ ggplot(diamonds, aes(factor(color), fill = factor(color))) +
   scale_fill_manual(values = mexico_palette("morena", 7, "continuous")) +
   theme_bw()
 ```
-![](lev7.png)
+![](examples/lev7.png)
 
 
 ## How do I get `mexicolors`? 
