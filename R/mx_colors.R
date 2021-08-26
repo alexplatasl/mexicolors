@@ -8,7 +8,10 @@ mexico_palettes <- list(
   pri = c("#00A54F", "#F5F5F5", "#B4B5B8", "#EE1D23"),
   pan = c("#164EAF", "#216BB6", "#03C4FD", "#F5F5F5"),
   prd = c("#FDD808", "#FEED86", "#F5F5F5", "#B4B5B8", "#221F20"),
-  cuatroT = c("#6A1C32", "#9F203B", "#BC955C", "#DDC9A4", "#98989A", "#767573", "#235B4E", "#10302B")
+  cuatroT = c("#6A1C32", "#9F203B", "#BC955C", "#DDC9A4", "#98989A", "#767573", "#235B4E", "#10302B"),
+  ine = c("#950054", "#D5007F", "#B2B2B2", "#000000"),
+  pvem = c("#50AA4E", "#87BF1C", "#ACCF77", "#FEEF1F", "#DE2837", "#000000"),
+  mc = c("#F68628","#F9A765","#FCBE8B","#FEDDC0","#D3D4D6","#A5A9AC","#81878D","#5D6770")
 )
 
 #' Mexico color palette generator
