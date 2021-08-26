@@ -1,7 +1,7 @@
 Package: mexicolors
 Type: Package
 Title: Mexican Politics-Inspired Color Palette Generator
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: person("Alejandro", "Platas-López", role = c("aut", "cre"),
     email = "alejandroplatasl@gmail.com", comment = c(ORCID = "0000-0002-2584-343X"))
 Maintainer: Alejandro Platas-López <alejandroplatasl@gmail.com>
