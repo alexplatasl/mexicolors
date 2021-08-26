@@ -24,6 +24,9 @@ Users simply supply the name of the desired palette in the main function `mexico
 3. `pan`: four colors including three shades of blue and one shade of white.
 4. `prd`: five colors including two shades of yellow, one shade of white, and two shades of grey.
 5. `cuatroT`: eight colors including two shades of red, two shades of yellow, two shades of gray, and two shades of green.
+6. `ine`: four colors including whine, mexican pink, grey, and black.
+7. `pvem`: six colors including three shades of green, yellow, red, and black.
+8. `mc`: eight colors including four shades of orange and four shades of gray..
 
 ### Displaying each palette
 
