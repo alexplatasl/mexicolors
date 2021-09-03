@@ -5,7 +5,7 @@
 \alias{mexico_palettes}
 \title{Mexican politics-inspired color palettes}
 \format{
-An object of class \code{list} of length 5.
+An object of class \code{list} of length 8.
 }
 \usage{
 mexico_palettes
