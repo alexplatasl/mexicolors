@@ -33,11 +33,11 @@ mexico_palettes <- list(
 #' mexico_palette("cuatroT")
 #'
 #' # Interpolating between existing colors based on the palettes using the "continuous" type
-#' mexico_palette(50, name = "morena", type = "continuous")
-#' mexico_palette(50, name = "pri", type = "continuous")
-#' mexico_palette(50, name = "pan", type = "continuous")
-#' mexico_palette(50, name = "prd", type = "continuous")
-#' mexico_palette(50, name = "cuatroT", type = "continuous")
+#' mexico_palette(n = 50, name = "morena", type = "continuous")
+#' mexico_palette(n = 50, name = "pri", type = "continuous")
+#' mexico_palette(n = 50, name = "pan", type = "continuous")
+#' mexico_palette(n = 50, name = "prd", type = "continuous")
+#' mexico_palette(n = 50, name = "cuatroT", type = "continuous")
 
 mexico_palette <- function(name, n, type = c("discrete", "continuous")) {
   type <- match.arg(type)
