@@ -38,46 +38,46 @@ Users simply supply the name of the desired palette in the main function `mexico
 ### Displaying each palette
 
 ```{r }
-mexico_palette("cuatroT")
+mexico_palette("cuatroT", display = TRUE)
 ```
 ![](examples/dis_4T.png)
 
 ```{r }
-mexico_palette("ine")
+mexico_palette("ine", display = TRUE)
 ```
 ![](examples/dis_ine.png)
 
 ```{r }
-mexico_palette("morena")
+mexico_palette("morena", display = TRUE)
 ```
 ![](examples/dis_morena.png)
 
 
 ```{r }
-mexico_palette("pri")
+mexico_palette("pri", display = TRUE)
 ```
 ![](examples/dis_pri.png)
 
 
 ```{r }
-mexico_palette("pan")
+mexico_palette("pan", display = TRUE)
 ```
 ![](examples/dis_pan.png)
 
 
 ```{r }
-mexico_palette("prd")
+mexico_palette("prd", display = TRUE)
 ```
 ![](examples/dis_prd.png)
 
 
 ```{r }
-mexico_palette("pvem")
+mexico_palette("pvem", display = TRUE)
 ```
 ![](examples/dis_pvem.png)
 
 ```{r }
-mexico_palette("mc")
+mexico_palette("mc", display = TRUE)
 ```
 ![](examples/dis_mc.png)
 
@@ -85,46 +85,46 @@ mexico_palette("mc")
 ### Interpolating between existing colors based on the palettes using the "continuous" `type`
 
 ```{r }
-mexico_palette(n = 50, name = "cuatroT", type = "continuous")
+mexico_palette(n = 50, name = "cuatroT", type = "continuous", display = TRUE)
 ```
 ![](examples/con_4T.png)
 
 ```{r }
-mexico_palette(n = 50, name = "ine", type = "continuous")
+mexico_palette(n = 50, name = "ine", type = "continuous", display = TRUE)
 ```
 ![](examples/con_ine.png)
 
 ```{r }
-mexico_palette(n = 50, name = "morena", type = "continuous")
+mexico_palette(n = 50, name = "morena", type = "continuous", display = TRUE)
 ```
 ![](examples/con_morena.png)
 
 
 ```{r }
-mexico_palette(n = 50, name = "pri", type = "continuous")
+mexico_palette(n = 50, name = "pri", type = "continuous", display = TRUE)
 ```
 ![](examples/con_pri.png)
 
 
 ```{r }
-mexico_palette(n = 50, name = "pan", type = "continuous")
+mexico_palette(n = 50, name = "pan", type = "continuous", display = TRUE)
 ```
 ![](examples/con_pan.png)
 
 
 ```{r }
-mexico_palette(n = 50, name = "prd", type = "continuous")
+mexico_palette(n = 50, name = "prd", type = "continuous", display = TRUE)
 ```
 ![](examples/con_prd.png)
 
 
 ```{r }
-mexico_palette(n = 50, name = "pvem", type = "continuous")
+mexico_palette(n = 50, name = "pvem", type = "continuous", display = TRUE)
 ```
 ![](examples/con_pvem.png)
 
 ```{r }
-mexico_palette(n = 50, name = "mc", type = "continuous")
+mexico_palette(n = 50, name = "mc", type = "continuous", display = TRUE)
 ```
 ![](examples/con_mc.png)
 
