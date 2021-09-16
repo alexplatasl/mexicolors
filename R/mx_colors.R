@@ -26,20 +26,26 @@ mexico_palettes <- list(
 #' @export
 #' @examples
 #' # Display each palette
-#' mexico_palette("morena")
-#' mexico_palette("pri")
-#' mexico_palette("pan")
-#' mexico_palette("prd")
-#' mexico_palette("cuatroT")
+#' mexico_palette("morena", display = TRUE)
+#' mexico_palette("pri", display = TRUE)
+#' mexico_palette("pan", display = TRUE)
+#' mexico_palette("prd", display = TRUE)
+#' mexico_palette("cuatroT", display = TRUE)
+#' mexico_palette("ine", display = TRUE)
+#' mexico_palette("pvem", display = TRUE)
+#' mexico_palette("mc", display = TRUE)
 #'
 #' # Interpolating between existing colors based on the palettes using the "continuous" type
-#' mexico_palette(n = 50, name = "morena", type = "continuous")
-#' mexico_palette(n = 50, name = "pri", type = "continuous")
-#' mexico_palette(n = 50, name = "pan", type = "continuous")
-#' mexico_palette(n = 50, name = "prd", type = "continuous")
-#' mexico_palette(n = 50, name = "cuatroT", type = "continuous")
+#' mexico_palette(n = 50, name = "morena", type = "continuous", display = TRUE)
+#' mexico_palette(n = 50, name = "pri", type = "continuous", display = TRUE)
+#' mexico_palette(n = 50, name = "pan", type = "continuous", display = TRUE)
+#' mexico_palette(n = 50, name = "prd", type = "continuous", display = TRUE)
+#' mexico_palette(n = 50, name = "cuatroT", type = "continuous", display = TRUE)
+#' mexico_palette(n = 50, name = "ine", type = "continuous", display = TRUE)
+#' mexico_palette(n = 50, name = "pvem", type = "continuous", display = TRUE)
+#' mexico_palette(n = 50, name = "mc", type = "continuous", display = TRUE)
 
-mexico_palette <- function(name, n, type = c("discrete", "continuous")) {
+mexico_palette <- function(name, n, type = c("discrete", "continuous"), display = FALSE) {
   type <- match.arg(type)
 
   pal <- mexico_palettes[[name]]
@@ -59,8 +65,13 @@ mexico_palette <- function(name, n, type = c("discrete", "continuous")) {
                 continuous = grDevices::colorRampPalette(pal)(n),
                 discrete = pal[1:n]
   )
-  #structure(out, class = "palette", name = name)
-  out
+
+  if (display == TRUE){
+    structure(out, class = "palette", name = name)
+  }else{
+    out
+  }
+
 }
 
 #' @export
