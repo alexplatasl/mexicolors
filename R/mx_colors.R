@@ -16,7 +16,7 @@ mexico_palettes <- list(
 
 #' Mexico color palette generator
 #'
-#' @usage mexico_palette("name", n, "type", display)
+#' @usage mexico_palette("name", n, "type", alpha, display)
 #'
 #' @param name Name of the specific palette in quotation marks.
 #' Available options are:
@@ -34,6 +34,8 @@ mexico_palettes <- list(
 #' @param n Number of colors to select from the palette. If null, then all colors in the palette are selected
 #'
 #' @param type Specify the type of color mapping, either "continuous" or "discrete" in quotation marks. Use "continuous" to include more colors than those in the palette. See \code{examples} below for more.
+#' @param alpha The alpha transparency, a number in [0,1], see argument alpha in
+#' \code{\link[grDevices]{hsv}}.
 #'
 #' @param display Display the color palette in a plot window? (default: \code{FALSE} -
 #'  generate color hex codes).
@@ -71,8 +73,12 @@ mexico_palettes <- list(
 #' mexico_palette(n = 50, name = "pvem", type = "continuous", display = TRUE)
 #' mexico_palette(n = 50, name = "mc", type = "continuous", display = TRUE)
 
-mexico_palette <- function(name, n, type = c("discrete", "continuous"), display = FALSE) {
+mexico_palette <- function(name, n, type = c("discrete", "continuous"), alpha = 1, display = FALSE) {
   type <- match.arg(type)
+
+  if (alpha < 0.06){
+    alpha = 0.06
+  }
 
   pal <- mexico_palettes[[name]]
   if (is.null(pal))
@@ -91,8 +97,18 @@ mexico_palette <- function(name, n, type = c("discrete", "continuous"), display 
   }
 
   out <- switch(type,
-                continuous = grDevices::colorRampPalette(pal)(n),
-                discrete = pal[1:n]
+                continuous = if (alpha < 1){
+                  colors <- grDevices::colorRampPalette(pal)(n)
+                  paste(colors, sprintf("%x", ceiling(255*alpha)), sep="")
+                }else{
+                  grDevices::colorRampPalette(pal)(n)
+                },
+                discrete = if (alpha < 1){
+                  colors <- pal[1:n]
+                  paste(colors, sprintf("%x", ceiling(255*alpha)), sep="")
+                }else{
+                  pal[1:n]
+                }
   )
 
   if (display == TRUE){
