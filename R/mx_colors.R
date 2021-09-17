@@ -2,7 +2,7 @@
 #'
 #' Use \code{\link{mexico_palette}} to produce desired color palette
 #'
-#' @export
+#' @keywords internal
 mexico_palettes <- list(
   morena = c("#B3282D", "#D35459", "#BDBBBB", "#808285"),
   pri = c("#00A54F", "#F5F5F5", "#B4B5B8", "#EE1D23"),
@@ -16,13 +16,39 @@ mexico_palettes <- list(
 
 #' Mexico color palette generator
 #'
-#' @usage mexico_palette("name", n, "type")
+#' @usage mexico_palette("name", n, "type", display)
+#'
+#' @param name Name of the specific palette in quotation marks.
+#' Available options are:
+#' \itemize{
+#' \item morena
+#' \item pri
+#' \item pan
+#' \item prd
+#' \item cuatroT
+#' \item ine
+#' \item pvem
+#' \item mc
+#' }
+#'
 #' @param n Number of colors to select from the palette. If null, then all colors in the palette are selected
-#' @param name Name of the specific palette in quotation marks. The options are: \code{morena}, \code{pri}, \code{pan}, \code{prd}, \code{cuatroT}
-#' @param type Specify the type of color mapping, either "continuous" or "discrete" in quotation marks. Use "continuous" to include more colors than those in the palette. See \code{examples} below for more
-#'   @importFrom graphics rgb rect par image text
+#'
+#' @param type Specify the type of color mapping, either "continuous" or "discrete" in quotation marks. Use "continuous" to include more colors than those in the palette. See \code{examples} below for more.
+#'
+#' @param display Display the color palette in a plot window? (default: \code{FALSE} -
+#'  generate color hex codes).
+#'
+#' @author Alejandro Platas-López: \email{alejandroplatasl@@gmail.com} / \href{https://www.linkedin.com/in/alexplatasl/}{@@alexplatasl}
+#' @author Patricia Avilés-Casas: \email{patriciaavilesc@@gmail.com} / \href{https://www.linkedin.com/in/patriciaavilesc}{@@patriciaavilesc}
+#'
+#' @importFrom graphics rgb rect par image text
+#'
+#' @importFrom ggplot2 scale_fill_gradientn scale_color_gradientn discrete_scale
+#'
 #' @references Philip Waggoner. 2019. amerika: American Politics-Inspired Color Palette Generator. R package version 0.1.0
+#'
 #' @return A vector of colors
+#'
 #' @export
 #' @examples
 #' # Display each palette
