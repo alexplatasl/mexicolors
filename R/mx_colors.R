@@ -34,6 +34,10 @@ mexico_palettes <- list(
 #' @param n Number of colors to select from the palette. If null, then all colors in the palette are selected
 #'
 #' @param type Specify the type of color mapping, either "continuous" or "discrete" in quotation marks. Use "continuous" to include more colors than those in the palette. See \code{examples} below for more.
+#'
+#' @param direction Sets the order of colors in the scale. 1 is the default.
+#' If -1, the order of colors is reversed.
+#'
 #' @param alpha The alpha transparency, a number in [0,1], see argument alpha in
 #' \code{\link[grDevices]{hsv}}.
 #'
@@ -73,11 +77,16 @@ mexico_palettes <- list(
 #' mexico_palette(n = 50, name = "pvem", type = "continuous", display = TRUE)
 #' mexico_palette(n = 50, name = "mc", type = "continuous", display = TRUE)
 
-mexico_palette <- function(name, n, type = c("discrete", "continuous"), alpha = 1, display = FALSE) {
+mexico_palette <- function(name, n, type = c("discrete", "continuous"), alpha = 1,
+                           direction = 1, display = FALSE) {
   type <- match.arg(type)
 
   if (alpha < 0.06){
     alpha = 0.06
+  }
+
+  if (abs(direction) != 1) {
+    stop("direction must be 1 or -1")
   }
 
   pal <- mexico_palettes[[name]]
@@ -110,6 +119,10 @@ mexico_palette <- function(name, n, type = c("discrete", "continuous"), alpha = 
                   pal[1:n]
                 }
   )
+
+  if (direction == -1){
+    out = rev(out)
+  }
 
   if (display == TRUE){
     structure(out, class = "palette", name = name)
