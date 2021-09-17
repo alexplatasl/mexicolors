@@ -4,8 +4,7 @@ Title: Mexican Politics-Inspired Color Palette Generator
 Version: 0.2.1
 Authors@R: c(person("Alejandro", "Platas-Lopez", role = c("aut", "cre"), 
     email = "alejandroplatasl@gmail.com", comment = c(ORCID = "0000-0002-2584-343X")),
-    person("Patricia", "Avilés-Casas", role = "aut", email = "patriciaavilesc@gmail.com", 
-    comment = c(ORCID = "0000-0002-2584-343X")))
+    person("Patricia", "Avilés-Casas", role = "aut", email = "patriciaavilesc@gmail.com"))
 Maintainer: Alejandro Platas-Lopez <alejandroplatasl@gmail.com>
 BugReports: https://github.com/alexplatasl/mexicolors/issues
 Description: A color palette generator inspired by Mexican politics, with 
