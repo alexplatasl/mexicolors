@@ -57,8 +57,11 @@ mexico_palette <- function(name, n, type = c("discrete", "continuous"), display 
   }
 
   if (type == "discrete" && n > length(pal)) {
-    stop("The number of requested colors is more than those offered by the palette.\n
-         Consider changing the palette or the number of requested colors.")
+    message(
+    "The number of requested colors is more than those offered by the palette.
+    Consider changing the palette or the number of requested colors.\n
+    Parameter 'type' is changed to continuous and interpolated colors are provided.")
+    type = "continuous"
   }
 
   out <- switch(type,
