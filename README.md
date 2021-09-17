@@ -176,4 +176,4 @@ ggplot(diamonds, aes(factor(color), fill = factor(color))) +
 
 ## How do I get `mexicolors`? 
 
-`mexicolors` is stored and developed at this GitHub repository, <https://github.com/alexplatasl/mexicolors/>, along with an [issue tracker](https://github.com/alexplatasl/mexicolors/issues/) for reporting bugs as well as suggesting package extensions and/or enhancements. In the spirit of open science, any level of interaction with the package is allowed.
+While the package is available for download at [CRAN](https://CRAN.R-project.org/package=mexicolors), `mexicolors` is stored and developed at this GitHub repository, <https://github.com/alexplatasl/mexicolors/>, along with an [issue tracker](https://github.com/alexplatasl/mexicolors/issues/) for reporting bugs as well as suggesting package extensions and/or enhancements. In the spirit of open science, any level of interaction with the package is allowed.
