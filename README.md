@@ -22,7 +22,7 @@ library(mexicolors)
 
 ## Use
 
-Users simply supply the name of the desired palette in the main function `mexico_palette()`, along with the number of colors desired from the palette (e.g., only 4 from a 5-color palette), and whether "continuous" or "discrete" `type` mapping is desired. 
+Users simply supply the name of the desired palette in the main function `mexico_palette()`, along with the number `n` of colors desired from the palette (e.g., only 4 from a 5-color palette), and whether "continuous" or "discrete" `type` mapping is desired. Semi-transparent colors are supported with `alpha` argument.
 
 ## Palettes 
 
